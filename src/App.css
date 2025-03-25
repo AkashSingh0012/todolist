@@ -36,7 +36,7 @@ html, body {
 }
 
 .navbar-toggler-icon {
-    filter: invert(1); 
+    filter: invert(1); /* Makes the toggler icon white */
 }
 
 .navbar-nav .nav-link {
@@ -44,7 +44,7 @@ html, body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffcc00 !important; 
+    color: #ffcc00 !important; /* Gold hover effect */
 }
 
 /* To-Do List Container */
@@ -52,7 +52,7 @@ html, body {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #22263f; 
+    background-color: #22263f; /* Darker Blue */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -139,7 +139,7 @@ html, body {
 .weather-icon {
     width: 40px;
     height: 40px;
-    filter: grayscale(100%); 
+    filter: grayscale(100%);
     margin-right: 10px;
 }
 
