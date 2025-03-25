@@ -1,38 +1,703 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f3b; 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  #root, .App {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+  .footer-container {
+    margin-top: auto; 
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
   }
+
+
+.navbar {
+    background-color: #252a48 !important; 
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; 
+}
+
+/* To-Do List Container */
+.todo-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #22263f; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* To-Do Item Styling */
+.todo-item {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Priority Colors */
+.priority {
+    color: orange;
+}
+
+.priority.medium {
+    color: darkgoldenrod;
+}
+
+.priority.low {
+    color: rgb(255, 255, 255);
+}
+
+/* Completed Task */
+.completed {
+    color: lightgreen;
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.button {
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: white;
+    color: #888;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Weather Widget */
+.weather-container {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #d3d3d3; 
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); 
+    margin-right: 10px;
+}
+
+.weather-text {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        font-size: 14px;
+    }
+
+    .weather-container {
+        right: 10px;
+        bottom: 5px;
+    }
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f3b; 
+    color: white; 
+  }
+  
+
+  #root, .App {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Push footer to the bottom */
+  .footer-container {
+    margin-top: auto; 
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+/* Header Navbar */
+.navbar {
+    background-color: #252a48 !important; 
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; 
+}
+
+/* To-Do List Container */
+.todo-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #22263f; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* To-Do Item Styling */
+.todo-item {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Priority Colors */
+.high {
+    color: orange;
+}
+
+.medium {
+    color: darkgoldenrod;
+}
+
+.low {
+    color: rgb(255, 255, 255);
+}
+
+/* Completed Task */
+.completed {
+    color: lightgreen;
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.button {
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: white;
+    color: #888;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.weather-container {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #d3d3d3; 
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f3b; 
+    color: white; 
+    font-family: Arial, sans-serif;
+}
+
+
+#root, .App {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.footer-container {
+    margin-top: auto; 
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.navbar {
+    background-color: #252a48 !important; 
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.2s ease-in-out; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; 
+}
+
+.todo-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #22263f; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; 
+}
+
+
+.todo-item {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+    background-color: #333; 
+}
+
+/* Priority Colors */
+.high {
+    color: orange;
+}
+
+.medium {
+    color: darkgoldenrod;
+}
+
+.low {
+    color: rgb(255, 255, 255);
+}
+
+
+.completed {
+    color: lightgreen;
+    text-decoration: line-through;
+}
+
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+
+.delete-button {
+    background-color: white;
+    color: #888;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.2s ease-in-out; 
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+.weather-container {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #d3d3d3; 
+    display: flex;
+    align-items: center;
+    font-size: 16px; 
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); /* Ensures it stays within the grey theme */
+    margin-right: 10px;
+}
+
+.weather-text {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        font-size: 14px;
+    }
+
+    .weather-container {
+        right: 10px;
+        bottom: 5px;
+    }
+}    filter: grayscale(100%); /* Ensures it stays within the grey theme */
+    margin-right: 10px;
+}
+
+.weather-text {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        font-size: 14px;
+    }
+
+    .weather-container {
+        right: 10px;
+        bottom: 5px;
+    }
+}
+
+
+.navbar {
+    background-color: #252a48 !important; 
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: rgb(7, 7, 7) !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+.navbar-nav .nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; 
+}
+
+
+.todo-container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #22263f; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.styled-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.styled-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.styled-input select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.styled-input button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.styled-input button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+/* Task List Styling */
+.styled-task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.styled-task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* To-Do Item Styling */
+.todo-item {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Priority Colors */
+.high {
+    color: orange;
+}
+
+.medium {
+    color: darkgoldenrod;
+}
+
+.low {
+    color: rgb(255, 255, 255);
+}
+
+/* Completed Task */
+.completed {
+    color: lightgreen;
+    text-decoration: line-through;
+}
+
+/* Buttons */
+.button {
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+
+.delete-button {
+    background-color: white;
+    color: #888;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    color: red;
+}
+
+/* Footer */
+.footer-container {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.weather-container {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #d3d3d3; 
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); 
+    margin-right: 10px;
+}
+
+.weather-text {
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        font-size: 14px;
+    }
+
+    .weather-container {
+        right: 10px;
+        bottom: 5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+       
+    
+    .styled-input {
+        display: block !important;
+     } 
+
+     .styled-input select,.styled-input input, .styled-input button {
+        margin-bottom: 25px;
+        display: block;
+        width: 100%;
+     }
+    
 }
